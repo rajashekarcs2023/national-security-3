@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html, body {
+  background: #070b10;
+  color: #c9d1d9;
+  min-height: 100vh;
+}
+
+body {
+  font-feature-settings: "ss01", "cv11";
+}
+
+/* Subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0b1018;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a2433;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #263449;
+}
+
+/* Crisp text for numeric readouts */
+.tnum {
+  font-variant-numeric: tabular-nums;
+}

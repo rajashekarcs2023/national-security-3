@@ -6,8 +6,7 @@ Built for the National Security hackathon. Addresses **PS2 (Edge Deployments)** 
 
 ---
 
-## The 30-Second Pitch
-
+## Problem-solution
 A forward operating post drops a frisbee-sized edge node in contested terrain. It listens to the RF spectrum continuously. A tiny CNN on-device (149K params, 150KB int8, ~5 ms inference) classifies every signal window as *normal, normal, normal, anomaly*. When it sees something it doesn't recognise — a DJI control burst at 2412 MHz, a frequency-hopping unknown at 5.8 GHz, a friendly radio emitting in the wrong band — it opens a custody track, generates an action cue (*"possible Group-1 UAS NE sector, 2412 MHz, request visual"*), and syncs a compact ~600-byte intelligence event upward. Raw RF stays at the edge. The link drops? Events queue locally in priority order and drain the instant comms return. A ~1 GB instruction-tuned LLM on the same box (Llama 3.2 1B via Ollama, or whatever small model you already have pulled — we auto-detect) writes the operator briefs — *the LLM is at the edge too*.
 
 This is the electromagnetic-spectrum problem the Anduril mentor outlined, solved end-to-end.

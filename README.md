@@ -1,4 +1,4 @@
-# SpectrumCustody
+# SkyCustody
 
 **Edge ML for electromagnetic spectrum custody. A frisbee-sized forward sensor listens to the RF spectrum, classifies every signal locally with a tiny CNN, flags what it doesn't recognise as out-of-distribution, maintains custody of unknown emitters, and syncs compact intelligence events to command — surviving comms outages along the way.**
 

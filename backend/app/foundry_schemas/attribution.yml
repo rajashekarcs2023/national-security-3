@@ -1,0 +1,28 @@
+apiName: Attribution
+displayName: Attribution Result
+description: |
+  One attribution decision per RF detection. Records the verdict
+  (BLUE_ATTRIBUTED / RED_KNOWN / AMBIGUOUS / UNEXPLAINED), the best library
+  match, every per-feature score the engine consulted, and the friendly
+  unit (if any) that explained the emission.
+primaryKey: id
+properties:
+  id:                                  { type: string,   required: true,  description: "Same id as the IntelligenceEvent that triggered it" }
+  event_id:                            { type: string,   required: true,  description: "Foreign key to IntelligenceEvent.id" }
+  track_id:                            { type: string }
+  timestamp:                           { type: timestamp, required: true }
+  verdict:                             { type: string,   required: true, enum: [BLUE_ATTRIBUTED, RED_KNOWN, AMBIGUOUS, UNEXPLAINED] }
+  confidence:                          { type: double }
+  best_emitter_id:                     { type: string,                   description: "Foreign key to EmitterProfile.id" }
+  best_emitter_name:                   { type: string }
+  best_score:                          { type: double }
+  attributed_unit_id:                  { type: string,                   description: "Foreign key to BlueForceUnit.unit_id" }
+  attributed_unit_callsign:            { type: string }
+  distance_to_attributed_unit_m:       { type: double }
+  feature_scores:                      { type: object,                   description: "{freq, bw, pattern, class}" }
+  runner_ups:                          { type: array<object> }
+  reason:                              { type: string }
+links:
+  event:           { objectType: IntelligenceEvent, cardinality: one, by: event_id }
+  emitter_profile: { objectType: EmitterProfile,    cardinality: one, by: best_emitter_id }
+  unit:            { objectType: BlueForceUnit,     cardinality: one, by: attributed_unit_id }

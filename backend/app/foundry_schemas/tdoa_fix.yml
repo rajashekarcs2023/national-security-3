@@ -1,0 +1,29 @@
+apiName: TDOAFix
+displayName: TDOA Geolocation Fix
+description: |
+  Output of the 4-sensor closed-form TDOA solver (Chan 1994 + Taylor-series
+  refinement, see app.pipeline.tdoa). Each fix carries a CEP, a fit
+  residual, and the full 2x2 covariance matrix for ellipse rendering.
+primaryKey: id
+properties:
+  id:                                  { type: string,   required: true,  description: "Generated UUID per fix (prefix: fix_)" }
+  event_id:                            { type: string,   required: true,  description: "Foreign key to IntelligenceEvent.id" }
+  track_id:                            { type: string }
+  timestamp:                           { type: timestamp, required: true }
+  lat:                                 { type: double,   required: true }
+  lon:                                 { type: double,   required: true }
+  alt_m:                               { type: double }
+  cep_m:                               { type: double,   required: true,  description: "50%-CEP radius (m)" }
+  residual_m:                          { type: double,                    description: "Fit residual" }
+  gdop:                                { type: double,                    description: "Geometric dilution of precision" }
+  sensor_ids:                          { type: array<string>,             description: "Which sensors contributed to this fix" }
+  method:                              { type: string,   enum: [chan_1994, taylor_series] }
+  cov_xx:                              { type: double }
+  cov_xy:                              { type: double }
+  cov_yx:                              { type: double }
+  cov_yy:                              { type: double }
+  truth_lat:                           { type: double,                    description: "Sim-only: ground-truth lat used to synthesise TDOAs" }
+  truth_lon:                           { type: double,                    description: "Sim-only: ground-truth lon" }
+links:
+  event:    { objectType: IntelligenceEvent, cardinality: one,  by: event_id }
+  sensors:  { objectType: SensorNode,        cardinality: many, by: sensor_ids }

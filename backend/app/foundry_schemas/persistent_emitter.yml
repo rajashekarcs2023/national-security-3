@@ -1,0 +1,22 @@
+apiName: PersistentEmitter
+displayName: Persistent Unknown Emitter
+description: |
+  A cluster of UNEXPLAINED detections that recur in the same place over
+  the past hour. Promoted from "wall of one-off RF anomalies" to a single
+  high-priority intelligence object so the operator only sees one card per
+  recurring threat.
+primaryKey: id
+properties:
+  id:                                  { type: string,   required: true,  description: "Cluster id (prefix: pe_)" }
+  first_seen:                          { type: timestamp, required: true }
+  last_seen:                           { type: timestamp, required: true }
+  n_detections:                        { type: integer,  required: true }
+  lat:                                 { type: double,   required: true,  description: "Cluster centroid" }
+  lon:                                 { type: double,   required: true }
+  radius_m:                            { type: double,                    description: "95th-percentile distance from centroid" }
+  signal_class:                        { type: string,                    description: "ML predicted_class or emitter_id used to group" }
+  detection_event_ids:                 { type: array<string>,             description: "FK to IntelligenceEvent.id" }
+  recommended_action:                  { type: string,                    description: "INVESTIGATE_AND_GEOLOCATE | HAND_OFF_INTERCEPTOR" }
+  priority:                            { type: string,   enum: [low, medium, high] }
+links:
+  detections: { objectType: IntelligenceEvent, cardinality: many, by: detection_event_ids }

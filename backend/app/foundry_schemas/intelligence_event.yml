@@ -1,0 +1,31 @@
+apiName: IntelligenceEvent
+displayName: Intelligence Event
+description: |
+  Compact, ontology-shaped event emitted by the edge node when the ML
+  classifier + action engine decide a reading is worth shipping. This is
+  the boundary object that crosses the edge → cloud (Foundry) gap.
+primaryKey: id
+properties:
+  id:                                { type: string,   required: true,  description: "Globally unique event id (prefix: evt_)" }
+  timestamp:                         { type: timestamp,required: true,  description: "Wall-clock at the edge sensor" }
+  site_id:                           { type: string,   required: true }
+  sensor_id:                         { type: string,   required: true }
+  track_id:                          { type: string,                    description: "Custody track this event belongs to (or '' if filtered)" }
+  event_type:                        { type: string,   required: true,  enum: [RF_ANOMALY, FRIENDLY_EMISSION, POSSIBLE_UAS_ACTIVITY, PROFILE_MISMATCH, PERSISTENT_UNKNOWN] }
+  title:                             { type: string,   required: true }
+  summary:                           { type: string }
+  classification:                    { type: string,                    description: "ML predicted_class" }
+  confidence:                        { type: double }
+  ood_score:                         { type: double }
+  priority:                          { type: string,   enum: [low, medium, high, critical] }
+  evidence:                          { type: array<string> }
+  recommended_action:                { type: string }
+  sync_status:                       { type: string,   enum: [local_only, queued, synced, failed] }
+  network_state_at_detection:        { type: string,   enum: [online, offline] }
+  payload_size_bytes:                { type: integer }
+  llm_brief:                         { type: string,                    description: "Optional natural-language brief filled in async" }
+  raw_size_estimate_bytes:           { type: integer,                   description: "What this would have cost to ship raw" }
+links:
+  attribution:    { objectType: Attribution,        cardinality: one,  by: id }
+  tdoa_fix:       { objectType: TDOAFix,            cardinality: one,  by: track_id }
+  custody_logs:   { objectType: CustodyStateLog,    cardinality: many, by: triggering_event_id }

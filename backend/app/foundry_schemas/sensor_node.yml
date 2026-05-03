@@ -1,0 +1,15 @@
+apiName: SensorNode
+displayName: RF Sensor Node
+description: |
+  One TDOA-capable RF sensor. Real arrays use GPS-disciplined oscillators
+  with ~10 ns jitter; here we simulate ~30 ns. The TDOA solver requires
+  surveyed positions + clock-jitter estimates to compute CEP.
+primaryKey: id
+properties:
+  id:                                  { type: string,   required: true }
+  name:                                { type: string,   required: true }
+  lat:                                 { type: double,   required: true }
+  lon:                                 { type: double,   required: true }
+  alt_m:                               { type: double }
+  clock_jitter_ns:                     { type: double,                    description: "1-σ clock jitter (ns)" }
+  status:                              { type: string,   enum: [online, offline, degraded] }

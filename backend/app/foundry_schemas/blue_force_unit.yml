@@ -1,0 +1,19 @@
+apiName: BlueForceUnit
+displayName: Blue Force Unit
+description: |
+  Friendly unit position + active emitters. In production this comes from
+  the TAK Server PLI feed; here we simulate a handful of units. Used by
+  the attribution engine to "explain away" friendly emissions.
+primaryKey: unit_id
+properties:
+  unit_id:                             { type: string,   required: true }
+  callsign:                            { type: string,   required: true }
+  lat:                                 { type: double,   required: true }
+  lon:                                 { type: double,   required: true }
+  alt_m:                               { type: double }
+  active_emitters:                     { type: array<string>,             description: "FK to EmitterProfile.id" }
+  heading_deg:                         { type: double }
+  speed_mps:                           { type: double }
+  last_update:                         { type: timestamp }
+links:
+  emitters: { objectType: EmitterProfile, cardinality: many, by: active_emitters }

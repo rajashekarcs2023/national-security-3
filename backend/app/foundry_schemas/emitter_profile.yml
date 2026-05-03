@@ -1,0 +1,23 @@
+apiName: EmitterProfile
+displayName: Emitter Library Profile
+description: |
+  Fingerprint of a known emitter, used by the attribution engine. Carries
+  the band + bandwidth + modulation + duty-cycle + hop-pattern + typical
+  power. Marked `side` so attribution can produce an affiliation verdict.
+primaryKey: id
+properties:
+  id:                                  { type: string,   required: true }
+  name:                                { type: string,   required: true }
+  side:                                { type: string,   required: true, enum: [friendly, unknown, civilian, adversary_simulated] }
+  expected_freq_min_mhz:               { type: double,   required: true }
+  expected_freq_max_mhz:               { type: double,   required: true }
+  expected_pattern:                    { type: string }
+  unit_id:                             { type: string,                    description: "Optional FK to BlueForceUnit.unit_id" }
+  site_id:                             { type: string }
+  nominal_bandwidth_mhz:               { type: double }
+  modulation:                          { type: string,   enum: [FHSS, DSSS, OFDM, GMSK, FSK, PSK, AM, FM, CW, pulsed, analog_video, unknown] }
+  pri_us:                              { type: double }
+  duty_cycle:                          { type: double }
+  hop_pattern:                         { type: string }
+  typical_power_dbm:                   { type: double }
+  notes:                               { type: string }

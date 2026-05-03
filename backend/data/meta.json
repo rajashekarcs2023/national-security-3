@@ -1,0 +1,70 @@
+{
+  "classes": [
+    "background_noise",
+    "friendly_radio_burst",
+    "commercial_continuous",
+    "drone_control_repeated_burst",
+    "frequency_hopping",
+    "chirp",
+    "friendly_profile_mismatch",
+    "unknown_ood"
+  ],
+  "num_classes": 8,
+  "embed_dim": 32,
+  "input_size": 64,
+  "val_acc": 0.9958333373069763,
+  "val_rec_loss": 0.016735808923840523,
+  "rec_err_mean": 0.016173429787158966,
+  "rec_err_std": 0.010007550939917564,
+  "rec_err_p95": 0.030978316441178322,
+  "rec_err_per_class": [
+    {
+      "class": "background_noise",
+      "mean": 0.026378720998764038,
+      "std": 0.0026543692220002413
+    },
+    {
+      "class": "friendly_radio_burst",
+      "mean": 0.004874402191489935,
+      "std": 0.0012180923949927092
+    },
+    {
+      "class": "commercial_continuous",
+      "mean": 0.01306068617850542,
+      "std": 0.002014193683862686
+    },
+    {
+      "class": "drone_control_repeated_burst",
+      "mean": 0.009364023804664612,
+      "std": 0.0016564606921747327
+    },
+    {
+      "class": "frequency_hopping",
+      "mean": 0.021547408774495125,
+      "std": 0.0029347084928303957
+    },
+    {
+      "class": "chirp",
+      "mean": 0.02170516364276409,
+      "std": 0.004397174809128046
+    },
+    {
+      "class": "friendly_profile_mismatch",
+      "mean": 0.00503897201269865,
+      "std": 0.0013024733634665608
+    },
+    {
+      "class": "unknown_ood",
+      "mean": 0.027875419706106186,
+      "std": 0.011935954913496971
+    }
+  ],
+  "train_seconds": 31.182250022888184,
+  "param_summary": {
+    "total_params": 149697,
+    "size_fp32_bytes": 598788,
+    "size_int8_bytes": 149697,
+    "embed_dim": 32,
+    "num_classes": 8
+  }
+}

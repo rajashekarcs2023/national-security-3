@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+venv/
+.env
+.env.local
+
+# PyTorch / models
+*.pt
+*.pth
+backend/data/weights.pt
+backend/data/centroids.npy
+
+# Node / Next
+node_modules/
+.next/
+out/
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+backend/logs/
+
+# Foundry exports (keep schema, ignore data)
+backend/exports/*.jsonl
+
+# Foundry runtime data (generated, large)
+backend/foundry_data/
+backend/foundry_ddil/
+
+# Raw datasets (too large for git)
+datasets/
+
+# Phase E + F — Foundry runtime working directories
+brainstormingstuff/
+
+# Build artifacts
+*.tsbuildinfo
+.pytest_cache/
+
+# Editor
+*.swp
+context.md
+context0.md
+problemstatement.md
+important.md

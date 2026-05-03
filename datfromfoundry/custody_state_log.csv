@@ -1,0 +1,13 @@
+﻿log_id,track_id,timestamp,previous_state,new_state,trigger_event_id,confidence,evidence_summary,action_cue
+LOG-001,T-001,2026-05-02T14:00:00Z,NONE,DETECTED,EVT-001,0.35,RF only,"Monitor. Single sensor, low confidence. Await corroboration."
+LOG-002,T-001,2026-05-02T14:02:15Z,DETECTED,TRACKING,EVT-004,0.82,RF+EO+ACOUSTIC fused,"POSSIBLE UAS CONFIRMED. Track bearing 050, 268ft AGL. Maintain visual. Prepare to report."
+LOG-003,T-001,2026-05-02T14:03:00Z,TRACKING,VISUAL_LOST,EVT-005,0.72,"RF present, EO lost",VISUAL LOST. RF still active bearing 055-065. Reacquire visually from NE sector. Scan tree line.
+LOG-004,T-001,2026-05-02T14:05:00Z,VISUAL_LOST,REACQUIRED,EVT-007,0.78,"EO reacquired, loitering",REACQUIRED. UAS now loitering over position. Possible ISR. Report immediately. Consider cover/concealment.
+LOG-005,T-001,2026-05-02T14:08:00Z,REACQUIRED,DEPARTING,EVT-009,0.25,"RF fading, departing east",UAS departing east. Maintain observation 2 min. Prepare SALUTE report for command.
+LOG-006,T-001,2026-05-02T14:09:00Z,DEPARTING,CLEARED,EVT-010,0.05,All sensors clear,TRACK CLEARED. Resume normal operations. Submit after-action report. Sync queued for command.
+LOG-007,T-002,2026-05-02T14:10:00Z,NONE,DETECTED,EVT-011,0.4,"EO only, erratic",Possible contact SW. Single sensor. Erratic path may indicate biological. Monitor.
+LOG-008,T-002,2026-05-02T14:11:30Z,DETECTED,DISMISSED,EVT-014,0.15,"No RF, biological pattern",LOW CONFIDENCE. No RF signature. Flight pattern consistent with large bird. Recommend DISMISS.
+LOG-009,T-003,2026-05-02T14:15:00Z,NONE,DETECTED,EVT-015,0.65,5.8GHz multi-emitter,MULTIPLE RF SIGNATURES detected bearing 355. Possible swarm. ELEVATE READINESS.
+LOG-010,T-003,2026-05-02T14:16:00Z,DETECTED,TRACKING,EVT-017,0.88,SWARM 3x confirmed,"CRITICAL: 3x UAS SWARM confirmed from N, 285ft, closing. Take cover. Report FLASH to command. Request support."
+LOG-011,T-003,2026-05-02T14:19:00Z,TRACKING,DEPARTING,EVT-019,0.6,"Swarm breaking, departing E","Swarm breaking formation, climbing, departing east. Maintain observation. Do NOT relax posture until confirmed clear."
+LOG-012,T-003,2026-05-02T14:20:00Z,DEPARTING,CLEARED,EVT-020,0.1,All signals lost,SWARM CLEARED. Maintain elevated readiness 10 min. Submit FLASH report. Sync critical — queue for immediate uplink.

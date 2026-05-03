@@ -1,0 +1,21 @@
+﻿event_id,track_id,timestamp,sensor_type,confidence,sector,latitude,longitude,altitude_ft,heading_deg,speed_kts,frequency_mhz,signal_strength_dbm,device_id,raw_evidence
+EVT-001,T-001,2026-05-02T14:00:00Z,RF,0.35,NE,34.0522,-118.2437,250.0,45.0,22.0,2412.0,-72.0,EDGE-ALPHA-01,"2.4GHz signal detected, intermittent, matches DJI protocol pattern"
+EVT-002,T-001,2026-05-02T14:01:30Z,EO,0.55,NE,34.0525,-118.2433,260.0,48.0,20.0,,,EDGE-ALPHA-01,"Small moving object detected, quadrotor silhouette, size consistent with Group 1 UAS"
+EVT-003,T-001,2026-05-02T14:02:00Z,ACOUSTIC,0.48,NE,34.0527,-118.243,265.0,50.0,18.0,,,EDGE-ALPHA-01,"High-frequency rotor noise detected, 4-blade signature, bearing 045"
+EVT-004,T-001,2026-05-02T14:02:15Z,FUSION,0.82,NE,34.0528,-118.2429,268.0,50.0,19.0,2412.0,-68.0,EDGE-ALPHA-01,FUSION: EO+RF+ACOUSTIC correlated. High confidence UAS. Classification: Group 1 quadrotor
+EVT-005,T-001,2026-05-02T14:03:00Z,EO,0.0,NE,,,,,,,,EDGE-ALPHA-01,"LOST: Object exited camera FOV bearing 060, behind tree line"
+EVT-006,T-001,2026-05-02T14:03:30Z,RF,0.72,NE,34.0532,-118.2425,,,,2412.0,-65.0,EDGE-ALPHA-01,"RF signal persists, stronger. UAS likely approaching. Bearing 055-065"
+EVT-007,T-001,2026-05-02T14:05:00Z,EO,0.78,NE,34.0535,-118.242,240.0,180.0,5.0,,,EDGE-ALPHA-01,"REACQUIRED: Object visible again, now loitering. Possible ISR pattern"
+EVT-008,T-001,2026-05-02T14:06:00Z,FUSION,0.91,NE,34.0536,-118.2419,235.0,190.0,3.0,2412.0,-60.0,EDGE-ALPHA-01,FUSION: Confirmed UAS loitering over position. ISR pattern. THREAT ELEVATED
+EVT-009,T-001,2026-05-02T14:08:00Z,RF,0.25,NE,34.054,-118.241,,90.0,35.0,2412.0,-85.0,EDGE-ALPHA-01,"RF signal fading, object departing east. Speed increasing"
+EVT-010,T-001,2026-05-02T14:09:00Z,FUSION,0.05,NE,,,,,,,,EDGE-ALPHA-01,ALL SENSORS CLEAR. No further detections. Track T-001 cleared
+EVT-011,T-002,2026-05-02T14:10:00Z,EO,0.4,SW,34.051,-118.245,180.0,220.0,15.0,,,EDGE-ALPHA-01,"Moving object detected SW, erratic flight path, possible UAS or large bird"
+EVT-012,T-002,2026-05-02T14:10:30Z,ACOUSTIC,0.2,SW,34.0508,-118.2452,175.0,210.0,18.0,,,EDGE-ALPHA-01,"Weak acoustic signature, inconsistent with motor noise. Possible biological"
+EVT-013,T-002,2026-05-02T14:11:00Z,RF,0.0,SW,,,,,,,,EDGE-ALPHA-01,NO RF signature detected in SW sector. Object likely non-electronic
+EVT-014,T-002,2026-05-02T14:11:30Z,FUSION,0.15,SW,34.0506,-118.2455,200.0,195.0,20.0,,,EDGE-ALPHA-01,FUSION: Low confidence. No RF corroboration. Erratic path. Likely biological (bird)
+EVT-015,T-003,2026-05-02T14:15:00Z,RF,0.65,N,34.0545,-118.2437,300.0,180.0,30.0,5745.0,-55.0,EDGE-ALPHA-01,"5.8GHz signal detected, multiple emitters, possible swarm. 2-3 distinct signals"
+EVT-016,T-003,2026-05-02T14:15:30Z,EO,0.7,N,34.0543,-118.2436,290.0,185.0,28.0,,,EDGE-ALPHA-01,"Multiple small objects detected in formation, bearing 355. Count: 3. Group 1 UAS"
+EVT-017,T-003,2026-05-02T14:16:00Z,FUSION,0.88,N,34.0541,-118.2436,285.0,182.0,27.0,5745.0,-52.0,EDGE-ALPHA-01,FUSION: SWARM DETECTED. 3x Group 1 UAS in formation. Approaching from N. CRITICAL THREAT
+EVT-018,T-003,2026-05-02T14:17:00Z,RF,0.9,N,34.0538,-118.2436,275.0,180.0,25.0,5745.0,-48.0,EDGE-ALPHA-01,Swarm closing. Signal strength increasing. ETA to overhead: 3 minutes
+EVT-019,T-003,2026-05-02T14:19:00Z,FUSION,0.6,N,34.0536,-118.2437,350.0,90.0,35.0,5745.0,-70.0,EDGE-ALPHA-01,"Swarm breaking formation, climbing and departing east. Possible recall signal received"
+EVT-020,T-003,2026-05-02T14:20:00Z,FUSION,0.1,N,,,,,,,,EDGE-ALPHA-01,All signals lost. Swarm departed. Track T-003 cleared

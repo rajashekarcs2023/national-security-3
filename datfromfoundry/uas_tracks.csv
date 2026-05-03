@@ -1,0 +1,4 @@
+﻿track_id,first_detected,last_updated,current_custody_state,peak_confidence,current_confidence,sector,classification,threat_level,evidence_types,num_sensor_events,custody_transitions,last_known_lat,last_known_lon,last_known_altitude_ft,device_id,operator_actions_taken,notes
+T-001,2026-05-02T14:00:00Z,2026-05-02T14:09:00Z,CLEARED,0.91,0.05,NE,GROUP_1_QUADROTOR,LOW,"RF,EO,ACOUSTIC,FUSION",10,5,34.054,-118.241,,EDGE-ALPHA-01,"CONFIRM,REPORT","Confirmed UAS, conducted ISR pass then departed east"
+T-002,2026-05-02T14:10:00Z,2026-05-02T14:11:30Z,DISMISSED,0.4,0.15,SW,FALSE_ALARM_BIOLOGICAL,NONE,"EO,ACOUSTIC",4,2,34.0506,-118.2455,200.0,EDGE-ALPHA-01,DISMISS,Dismissed as bird. No RF signature. Erratic biological flight pattern
+T-003,2026-05-02T14:15:00Z,2026-05-02T14:20:00Z,CLEARED,0.9,0.1,N,GROUP_1_SWARM,CRITICAL,"RF,EO,FUSION",6,3,,,,EDGE-ALPHA-01,"ESCALATE,REPORT",3x UAS swarm from N. Approached then departed east. Possible recall signal

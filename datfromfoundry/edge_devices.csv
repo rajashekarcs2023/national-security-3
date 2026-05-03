@@ -1,0 +1,3 @@
+﻿device_id,device_name,location_lat,location_lon,deployment_type,sensors_equipped,network_status,last_sync_timestamp,sensitivity_level,battery_pct,uptime_hours,total_tracks_detected,active_tracks,sync_queue_depth,firmware_version
+EDGE-ALPHA-01,Alpha Site - Forward OP,34.0522,-118.2437,FORWARD_OBSERVATION_POST,"EO,RF,ACOUSTIC",CONNECTED,2026-05-02T14:20:00Z,HIGH,72,18.5,3,0,0,1.4.2
+EDGE-BRAVO-02,Bravo Site - Convoy Halt,34.048,-118.25,CONVOY_HALT,"EO,RF",DISCONNECTED,2026-05-02T13:45:00Z,MEDIUM,45,6.2,0,0,3,1.4.1

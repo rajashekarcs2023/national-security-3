@@ -1,0 +1,9 @@
+﻿action_id,track_id,timestamp,operator_id,action_type,details
+ACT-001,T-001,2026-05-02T14:02:30Z,OPR-SGT-JONES,CONFIRM_TRACK,Confirmed UAS track T-001. Visual and RF corroboration.
+ACT-002,T-001,2026-05-02T14:05:15Z,OPR-SGT-JONES,REACQUIRE_VISUAL,Reacquired visual contact. UAS loitering NE. Bearing 050.
+ACT-003,T-001,2026-05-02T14:06:30Z,OPR-SGT-JONES,REPORT_SUBMITTED,"SALUTE report submitted: Size-SMALL, Activity-ISR, Location-NE 34.0536/-118.2419, Unit-UNK, Time-1406, Equipment-GROUP1_QUAD"
+ACT-004,T-001,2026-05-02T14:09:30Z,OPR-SGT-JONES,TRACK_CLEARED,Track T-001 cleared. UAS departed east. After-action logged.
+ACT-005,T-002,2026-05-02T14:12:00Z,OPR-SGT-JONES,DISMISS_TRACK,Dismissed T-002 as false alarm. No RF. Biological flight pattern. Likely large bird.
+ACT-006,T-003,2026-05-02T14:16:15Z,OPR-SGT-JONES,ESCALATE_THREAT,FLASH: 3x UAS swarm detected N. Escalating to command. Requesting C-UAS support.
+ACT-007,T-003,2026-05-02T14:16:30Z,OPR-SGT-JONES,INCREASE_SENSITIVITY,Increased all sensor sensitivity to MAX. Expanded detection radius.
+ACT-008,T-003,2026-05-02T14:20:30Z,OPR-SGT-JONES,REPORT_SUBMITTED,"FLASH report submitted for swarm event. 3x Group 1 UAS, formation approach from N, departed E after 5 min."

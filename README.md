@@ -2,7 +2,7 @@
 
 **Edge ML for electromagnetic spectrum custody. A frisbee-sized forward sensor listens to the RF spectrum, classifies every signal locally with a tiny CNN, flags what it doesn't recognise as out-of-distribution, maintains custody of unknown emitters, and syncs compact intelligence events to command — surviving comms outages along the way.**
 
-Built for the National Security hackathon. Addresses **PS2 (Edge Deployments)** as primary track, with direct supporting coverage of **PS1 (Sensor Fusion & Custody)** and **PS3 (Mission Command & Control)**. Plugs into the Palantir Foundry ontology that is already deployed on the cloud side (`datfromfoundry/`).
+Addresses **PS2 (Edge Deployments)** as primary track, with direct supporting coverage of **PS1 (Sensor Fusion & Custody)** and **PS3 (Mission Command & Control)**. Plugs into the Palantir Foundry ontology that is already deployed on the cloud side (`datfromfoundry/`).
 
 ---
 
